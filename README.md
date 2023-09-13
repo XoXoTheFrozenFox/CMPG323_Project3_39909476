@@ -7,6 +7,16 @@
 - Downloaded and started analyzing the marking schema and project overview.
 - Marked out the tasks needed to be done according to the excel marking scheme from easy to hard.
 - Started doing research regarding the project and added the references.
+- Updated the project-board on Kanban.
+- Added branches.
+## How to use this project
+- This project will be a frontend that uses objects and repositories to interact with the API.
+- It gives the user a clean interface without JSON formatted data to interact with the API.
+- The security of the API is also improved when interacting using a a web-interface.
+- The users will log into the system which and set up 2FA(2 fator authentication).
+- When users want to interact with the system and a specfic subset of the API for example orders, they will be able to navigate to orders and do different execute different methods like getOrders(),getOrders(int ID),setOrders(ID) and able to delete orders.
+- With this insights the users recieve from this project, they will be able to use the Orders-data for various different types of operations and applications.
+- Because of the web interface being used, it is easier to learn how to use the GUI, which can make the people that use it proficient in the long term.
 ## References(A lot of research did for me to be able to do the project)
 - Sarcar, V. and Sarcar, V., 2021. Know SOLID Principles. Simple and Efficient Programming with C# Skills to Build Applications with Visual Studio and. NET, pp.49-108.
 - Tyurin, A., 2017. Logistic Principles Application for Managing the Extraction and Transportation of Solid Minerals. In E3S Web of Conferences (Vol. 21, p. 01013). EDP Sciences.
