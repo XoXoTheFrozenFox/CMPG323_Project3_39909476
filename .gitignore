@@ -2,3 +2,7 @@
 *.dll
 *.vsidx
 .vs/EcoPower_Logistics/v17/.suo
+SuperStore P3/appsettings.Development.json
+SuperStore P3/appsettings.json
+SuperStore P3/obj/Release/net6.0/PubTmp/Out/appsettings.json
+SuperStore P3/Data/SuperStoreContext.cs
