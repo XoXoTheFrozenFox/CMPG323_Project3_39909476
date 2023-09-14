@@ -22,6 +22,8 @@
 - Hosted the app on azure with a free tier app service.
 - Updated the kanban project.
 - Updated the readme.
+- Did tier 1.
+- Have problems with Orders I still need to fix
 ## How to use this project
 - This project will be a frontend that uses interfaces and repositories to interact with the API.
 - It gives the user a clean interface without JSON formatted data to interact with the API.
