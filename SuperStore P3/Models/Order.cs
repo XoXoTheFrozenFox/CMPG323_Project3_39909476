@@ -11,6 +11,7 @@ namespace Models
             OrderDetails = new HashSet<OrderDetail>();
         }
 
+
         [DisplayName("Order ID")]
         public int OrderId { get; set; }
         [DisplayName("Order Date")]

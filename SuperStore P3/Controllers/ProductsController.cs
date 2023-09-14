@@ -4,93 +4,98 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Data;
 using Models;
+using EcoPower_Logistics.Repository; // Add the appropriate namespace for your repository
 
 namespace Controllers
 {
     [Authorize]
     public class ProductsController : Controller
     {
-        private readonly SuperStoreContext _context;
+        private readonly IProductsRepository _productsRepository;
 
-        public ProductsController(SuperStoreContext context)
+        // Constructor to inject the IProductsRepository
+        public ProductsController(IProductsRepository productsRepository)
         {
-            _context = context;
+            _productsRepository = productsRepository;
         }
 
         // GET: Products
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return _context.Products != null ?
-                        View(await _context.Products.ToListAsync()) :
-                        Problem("Entity set 'SuperStoreContext.Products'  is null.");
+            // Retrieve a list of products from the repository and pass it to the view
+            var products = _productsRepository.GetAll();
+            return View(products);
         }
 
         // GET: Products/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public IActionResult Details(int? id)
         {
-            if (id == null || _context.Products == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var product = await _context.Products
-                .FirstOrDefaultAsync(m => m.ProductId == id);
+            // Retrieve a specific product by ID from the repository
+            var product = _productsRepository.GetById(id.Value);
+
             if (product == null)
             {
                 return NotFound();
             }
 
+            // Display the product details in the view
             return View(product);
         }
 
         // GET: Products/Create
         public IActionResult Create()
         {
+            // Display the Create product view
             return View();
         }
 
         // POST: Products/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductId,ProductName,ProductDescription,UnitsInStock")] Product product)
+        public IActionResult Create([Bind("ProductId,ProductName,ProductDescription,UnitsInStock")] Product product)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(product);
-                await _context.SaveChangesAsync();
+                // Create a new product in the repository if the model is valid
+                _productsRepository.Create(product);
                 return RedirectToAction(nameof(Index));
             }
+
+            // Return the Create view with validation errors if the model is not valid
             return View(product);
         }
 
         // GET: Products/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public IActionResult Edit(int? id)
         {
-            if (id == null || _context.Products == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var product = await _context.Products.FindAsync(id);
+            // Retrieve a specific product by ID from the repository for editing
+            var product = _productsRepository.GetById(id.Value);
+
             if (product == null)
             {
                 return NotFound();
             }
+
+            // Display the Edit product view
             return View(product);
         }
 
         // POST: Products/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,ProductDescription,UnitsInStock")] Product product)
+        public IActionResult Edit(int id, [Bind("ProductId,ProductName,ProductDescription,UnitsInStock")] Product product)
         {
             if (id != product.ProductId)
             {
@@ -99,67 +104,49 @@ namespace Controllers
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(product);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ProductExists(product.ProductId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                // Update the product in the repository if the model is valid
+                _productsRepository.Edit(product);
                 return RedirectToAction(nameof(Index));
             }
+
+            // Return the Edit view with validation errors if the model is not valid
             return View(product);
         }
 
         // GET: Products/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public IActionResult Delete(int? id)
         {
-            if (id == null || _context.Products == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var product = await _context.Products
-                .FirstOrDefaultAsync(m => m.ProductId == id);
+            // Retrieve a specific product by ID from the repository for deletion
+            var product = _productsRepository.GetById(id.Value);
+
             if (product == null)
             {
                 return NotFound();
             }
 
+            // Display the Delete product view
             return View(product);
         }
 
         // POST: Products/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public IActionResult DeleteConfirmed(int id)
         {
-            if (_context.Products == null)
+            if (!_productsRepository.Exists(id))
             {
-                return Problem("Entity set 'SuperStoreContext.Products'  is null.");
-            }
-            var product = await _context.Products.FindAsync(id);
-            if (product != null)
-            {
-                _context.Products.Remove(product);
+                return NotFound();
             }
 
-            await _context.SaveChangesAsync();
+            // Delete the product from the repository
+            _productsRepository.Delete(id);
+
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool ProductExists(int id)
-        {
-            return (_context.Products?.Any(e => e.ProductId == id)).GetValueOrDefault();
         }
     }
 }
