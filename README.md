@@ -23,11 +23,11 @@
 - Updated the kanban project.
 - Updated the readme.
 ## How to use this project
-- This project will be a frontend that uses objects and repositories to interact with the API.
+- This project will be a frontend that uses interfaces and repositories to interact with the API.
 - It gives the user a clean interface without JSON formatted data to interact with the API.
 - The security of the API is also improved when interacting using a a web-interface.
 - The users will log into the system which and set up 2FA(2 fator authentication).
-- When users want to interact with the system and a specfic subset of the API for example orders, they will be able to navigate to orders and do different execute different methods like getOrders(),getOrders(int ID),setOrders(ID) and able to delete orders.
+- When users want to interact with the system and a specfic subset of the API for example orders, they will be able to navigate to orders and execute different methods like getOrders(),getOrders(int ID),setOrders(ID) and able to delete orders.
 - With this insights the users recieve from this project, they will be able to use the Orders-data for various different types of operations and applications.
 - Because of the web interface being used, it is easier to learn how to use the GUI, which can make the people that use it proficient in the long term.
 ## References(A lot of research did for me to be able to do the project)
