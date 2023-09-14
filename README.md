@@ -9,6 +9,9 @@
 - Started doing research regarding the project and added the references.
 - Updated the project-board on Kanban.
 - Added branches.
+- Downloaded the project.
+- Did the pull request.
+- Added a .gitignore file to my solution.
 ## How to use this project
 - This project will be a frontend that uses objects and repositories to interact with the API.
 - It gives the user a clean interface without JSON formatted data to interact with the API.
