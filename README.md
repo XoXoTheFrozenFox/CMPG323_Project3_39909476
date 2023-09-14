@@ -1,6 +1,6 @@
 # CMPG323_Project3_39909476
 ## Link for the project
-- (comes here)
+- https://ecopowerlogistics20230914170748.azurewebsites.net
 ## Work did 2023/09/05
 - Added a readme-file and my initial for the first commit, 7 days before the submission.
 ## Work did 2023/09/13
@@ -12,6 +12,16 @@
 - Downloaded the project.
 - Did the pull request.
 - Added a .gitignore file to my solution.
+## Work did 2023/09/14
+- Added the repositories for Orders, Products and Customers.
+- Added the interfaces for Orders, Products and Customers.
+- Added code to the orders, products and customers repositories.
+- Added code to the orders, products and customers interfaces.
+- Added comments to all of the code.
+- Changed all of the controllers to interact with the interfaces and repository-classes.
+- Hosted the app on azure with a free tier app service.
+- Updated the kanban project.
+- Updated the readme.
 ## How to use this project
 - This project will be a frontend that uses objects and repositories to interact with the API.
 - It gives the user a clean interface without JSON formatted data to interact with the API.
@@ -21,7 +31,7 @@
 - With this insights the users recieve from this project, they will be able to use the Orders-data for various different types of operations and applications.
 - Because of the web interface being used, it is easier to learn how to use the GUI, which can make the people that use it proficient in the long term.
 ## References(A lot of research did for me to be able to do the project)
-- Sarcar, V. and Sarcar, V., 2021. Know SOLID Principles. Simple and Efficient Programming with C# Skills to Build Applications with Visual Studio and. NET, pp.49-108.
+- Sarcar, V. and Sarcar, V., 2021. Know SOLID Principles. Simple and Efficient Programming with C# Skills to Build Applications with Visual Studio and .NET, pp.49-108.
 - Tyurin, A., 2017. Logistic Principles Application for Managing the Extraction and Transportation of Solid Minerals. In E3S Web of Conferences (Vol. 21, p. 01013). EDP Sciences.
 - Joshi, Bipin, and Bipin Joshi. "Overview of SOLID Principles and Design Patterns." Beginning SOLID Principles and Design Patterns for ASP. NET Developers (2016): 1-44.
 - Marcotte, Carl-Hugo. An An Atypical ASP. NET Core 5 Design Patterns Guide: A SOLID adventure into architectural principles, design patterns,. NET 5, and C. Packt Publishing Ltd, 2020.
