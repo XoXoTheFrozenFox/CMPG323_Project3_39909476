@@ -1,1 +1,6 @@
+
 *.dll
+*.vsidx
+.vs/EcoPower_Logistics/v17/.suo
+*.cache
+*.pdb
