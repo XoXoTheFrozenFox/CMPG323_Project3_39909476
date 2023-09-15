@@ -23,7 +23,10 @@
 - Updated the kanban project.
 - Updated the readme.
 - Did tier 1.
-- Have problems with Orders I still need to fix
+- Have problems with Orders I still need to fix.
+## Work did 2023/09/15
+- Fixed the problems I got with the orders controller.
+- My project is for further notics finished because of being exam.
 ## How to use this project
 - This project will be a frontend that uses interfaces and repositories to interact with the API.
 - It gives the user a clean interface without JSON formatted data to interact with the API.
