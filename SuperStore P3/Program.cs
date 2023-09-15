@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Data;
 using EcoPower_Logistics.Repository;
+using Models;
 
 // Create a new WebApplication instance
 var builder = WebApplication.CreateBuilder(args);
@@ -26,11 +27,18 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 // Add MVC controllers and views
 builder.Services.AddControllersWithViews();
 
+// Register the generic repository with a factory method
+builder.Services.AddScoped(typeof(IGenericRepository<,>), serviceProvider =>
+{
+    var dbContext = serviceProvider.GetRequiredService<SuperStoreContext>();
+    return new GenericRepository<Customer, int>(dbContext); // Change Customer and int to the desired entity and key types
+});
 // Register your repository interfaces with their implementations
 builder.Services.AddScoped<ICustomersRepository, CustomersRepository>();
 builder.Services.AddScoped<IOrdersRepository, OrdersRepository>();
 builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
 builder.Services.AddScoped<IOrderDetailsRepository, OrderDetailsRepository>();
+
 // Build the application
 var app = builder.Build();
 
