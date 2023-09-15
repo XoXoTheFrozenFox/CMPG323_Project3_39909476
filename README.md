@@ -25,6 +25,7 @@
 - Downloaded and started analyzing the marking schema and project overview.
 - Marked out the tasks needed to be done according to the excel marking scheme from easy to hard.
 - Started doing research regarding the project and added the references.
+- Fixed even more bugs, Orderscontroller was a pain...
 - Updated the project-board on Kanban.
 - Added branches.
 - Downloaded the project.
