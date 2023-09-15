@@ -45,6 +45,11 @@
 - Have problems with Orders I still need to fix.
 ## Work did 2023/09/15
 - Fixed the problems I got with the orders controller.
+- Coded generic interface.
+- Coded generic repository.
+- Added relevant code in program.cs.
+- Fixed bugs.
+- Added level 2.
 - My project is for further notics finished because of being exam.
 ## How to use this project
 - This project will be a frontend that uses interfaces and repositories to interact with the API.
