@@ -30,7 +30,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ICustomersRepository, CustomersRepository>();
 builder.Services.AddScoped<IOrdersRepository, OrdersRepository>();
 builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
-
+builder.Services.AddScoped<IOrderDetailsRepository, OrderDetailsRepository>();
 // Build the application
 var app = builder.Build();
 
