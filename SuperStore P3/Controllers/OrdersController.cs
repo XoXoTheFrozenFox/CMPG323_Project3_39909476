@@ -66,12 +66,10 @@ namespace Controllers
         public IActionResult Create([Bind("OrderId,OrderDate,CustomerId,DeliveryAddress")] Order order)
         {
             // Validate and create a new order.
-            if (ModelState.IsValid)
-            {
-                _ordersRepository.Create(order);
-                return RedirectToAction(nameof(Index));
-            }
-
+           
+             _ordersRepository.Create(order);
+             return RedirectToAction(nameof(Index));
+            
             // If there are validation errors, redisplay the form with the submitted data.
             ViewBag.CustomerId = new SelectList(_customersRepository.GetAll(), "CustomerId", "CustomerId", order.CustomerId);
             return View(order);
@@ -109,11 +107,11 @@ namespace Controllers
             }
 
             // Validate and update the order.
-            if (ModelState.IsValid)
-            {
-                _ordersRepository.Edit(order);
-                return RedirectToAction(nameof(Index));
-            }
+            
+            
+             _ordersRepository.Edit(order);
+             return RedirectToAction(nameof(Index));
+            
 
             // If there are validation errors, redisplay the form with the submitted data.
             ViewBag.CustomerId = new SelectList(_customersRepository.GetAll(), "CustomerId", "CustomerId", order.CustomerId);

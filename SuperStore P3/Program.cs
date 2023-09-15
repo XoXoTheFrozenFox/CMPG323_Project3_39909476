@@ -28,11 +28,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 
 // Register the generic repository with a factory method
-builder.Services.AddScoped(typeof(IGenericRepository<,>), serviceProvider =>
-{
-    var dbContext = serviceProvider.GetRequiredService<SuperStoreContext>();
-    return new GenericRepository<Customer, int>(dbContext); // Change Customer and int to the desired entity and key types
-});
+builder.Services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
 // Register your repository interfaces with their implementations
 builder.Services.AddScoped<ICustomersRepository, CustomersRepository>();
 builder.Services.AddScoped<IOrdersRepository, OrdersRepository>();
