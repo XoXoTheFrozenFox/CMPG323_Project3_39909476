@@ -45,7 +45,6 @@ else
     // Use a custom error page for non-development environments
     app.UseExceptionHandler("/Home/Error");
     // You can enable HSTS (HTTP Strict Transport Security) if needed
-    // app.UseHsts();
 }
 
 // Enable serving static files (e.g., CSS, JavaScript)
