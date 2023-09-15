@@ -5,19 +5,19 @@
 ![image](https://github.com/XoXoTheFrozenFox/CMPG323_Project3_39909476/assets/104361159/67c0b997-f7db-407d-9e22-3644c070c73c)
 ## Controller screenshots create new
 ![image](https://github.com/XoXoTheFrozenFox/CMPG323_Project3_39909476/assets/104361159/921ab13c-edb4-4363-a06a-5fbc4eb42af8)
-![image](https://github.com/XoXoTheFrozenFox/CMPG323_Project3_39909476/assets/104361159/3bb8e366-5262-487d-88b5-5375e726a12a)
+![image](https://github.com/XoXoTheFrozenFox/CMPG323_Project3_39909476/assets/104361159/9747d79d-1524-49b0-9ee5-941536725b72)
 ![image](https://github.com/XoXoTheFrozenFox/CMPG323_Project3_39909476/assets/104361159/fdab9beb-5c78-4de7-a5b8-31b5059d87b7)
 ## Controller screenshots edit
 ![image](https://github.com/XoXoTheFrozenFox/CMPG323_Project3_39909476/assets/104361159/afcb9838-de25-44a3-bf5b-0e844e66b515)
-![image](https://github.com/XoXoTheFrozenFox/CMPG323_Project3_39909476/assets/104361159/b19d93b9-6ac8-4dbb-be7c-880ed66a6658)
+![image](https://github.com/XoXoTheFrozenFox/CMPG323_Project3_39909476/assets/104361159/e1af0101-dbbd-41b8-aed7-42159039f58c)
 ![image](https://github.com/XoXoTheFrozenFox/CMPG323_Project3_39909476/assets/104361159/33c0fd7b-2627-4687-bf5c-b14025fbb52b)
 ## Controller screenshots details
 ![image](https://github.com/XoXoTheFrozenFox/CMPG323_Project3_39909476/assets/104361159/1eda09ce-65d5-4da1-8cdd-1b8203bae67f)
-- wefwefewf
+![image](https://github.com/XoXoTheFrozenFox/CMPG323_Project3_39909476/assets/104361159/7aa39389-accf-4b2e-9a49-adf2568076ed)
 ![image](https://github.com/XoXoTheFrozenFox/CMPG323_Project3_39909476/assets/104361159/d88ffed0-7a2a-468d-b4f3-052eb652af2f)
 ## Controller screenshot delete
 ![image](https://github.com/XoXoTheFrozenFox/CMPG323_Project3_39909476/assets/104361159/f7dc0efd-4a1d-444e-9374-f87a195be1c3)
-- wefwefewf
+![image](https://github.com/XoXoTheFrozenFox/CMPG323_Project3_39909476/assets/104361159/c118bda6-2e0b-431d-af7f-c20c98768904)
 ![image](https://github.com/XoXoTheFrozenFox/CMPG323_Project3_39909476/assets/104361159/36061f15-7953-4a58-9566-3a0e41df37f9)
 ## Work did 2023/09/05
 - Added a readme-file and my initial for the first commit, 7 days before the submission.
@@ -25,6 +25,7 @@
 - Downloaded and started analyzing the marking schema and project overview.
 - Marked out the tasks needed to be done according to the excel marking scheme from easy to hard.
 - Started doing research regarding the project and added the references.
+- Fixed even more bugs, Orderscontroller was a pain...
 - Updated the project-board on Kanban.
 - Added branches.
 - Downloaded the project.
